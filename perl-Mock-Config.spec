@@ -4,13 +4,13 @@
 #
 Name     : perl-Mock-Config
 Version  : 0.03
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
 Summary  : 'temporarily set Config or XSConfig values'
 Group    : Development/Tools
 License  : Artistic-2.0
-Requires: perl-Mock-Config-man
+BuildRequires : buildreq-cpan
 
 %description
 NAME
@@ -18,12 +18,13 @@ Mock::Config - temporarily set Config or XSConfig values
 VERSION
 Version 0.02
 
-%package man
-Summary: man components for the perl-Mock-Config package.
-Group: Default
+%package dev
+Summary: dev components for the perl-Mock-Config package.
+Group: Development
+Provides: perl-Mock-Config-devel = %{version}-%{release}
 
-%description man
-man components for the perl-Mock-Config package.
+%description dev
+dev components for the perl-Mock-Config package.
 
 
 %prep
@@ -52,9 +53,9 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -63,8 +64,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Mock/Config.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Mock/Config.pm
 
-%files man
+%files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Mock::Config.3
