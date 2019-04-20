@@ -4,7 +4,7 @@
 #
 Name     : perl-Mock-Config
 Version  : 0.03
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
 Summary  : 'temporarily set Config or XSConfig values'
@@ -22,6 +22,7 @@ Version 0.02
 Summary: dev components for the perl-Mock-Config package.
 Group: Development
 Provides: perl-Mock-Config-devel = %{version}-%{release}
+Requires: perl-Mock-Config = %{version}-%{release}
 
 %description dev
 dev components for the perl-Mock-Config package.
