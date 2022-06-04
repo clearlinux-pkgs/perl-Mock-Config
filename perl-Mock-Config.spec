@@ -4,7 +4,7 @@
 #
 Name     : perl-Mock-Config
 Version  : 0.03
-Release  : 17
+Release  : 18
 URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
 Summary  : 'temporarily set Config or XSConfig values'
@@ -83,4 +83,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Mock/Config.pm
+/usr/lib/perl5/*
