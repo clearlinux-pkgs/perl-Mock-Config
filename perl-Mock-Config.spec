@@ -4,7 +4,7 @@
 #
 Name     : perl-Mock-Config
 Version  : 0.9924.02
-Release  : 21
+Release  : 20
 URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/version-0.9924_02.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/version-0.9924_02.tar.gz
 Summary  : 'Structured version objects'
