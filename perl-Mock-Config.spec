@@ -6,10 +6,10 @@
 # autospec commit: 94c6be0
 #
 Name     : perl-Mock-Config
-Version  : 0.03
-Release  : 28
-URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.03.tar.gz
+Version  : 0.04
+Release  : 29
+URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.04.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.04.tar.gz
 Summary  : 'temporarily set Config or XSConfig values'
 Group    : Development/Tools
 License  : Artistic-2.0
@@ -23,7 +23,7 @@ BuildRequires : buildreq-cpan
 NAME
 Mock::Config - temporarily set Config or XSConfig values
 VERSION
-Version 0.02
+Version 0.04
 
 %package dev
 Summary: dev components for the perl-Mock-Config package.
@@ -45,8 +45,8 @@ perl components for the perl-Mock-Config package.
 
 
 %prep
-%setup -q -n Mock-Config-0.03
-cd %{_builddir}/Mock-Config-0.03
+%setup -q -n Mock-Config-0.04
+cd %{_builddir}/Mock-Config-0.04
 
 %build
 export http_proxy=http://127.0.0.1:9/
