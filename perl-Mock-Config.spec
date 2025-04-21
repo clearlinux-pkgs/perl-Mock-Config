@@ -7,7 +7,7 @@
 #
 Name     : perl-Mock-Config
 Version  : 0.04
-Release  : 29
+Release  : 30
 URL      : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.04.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Mock-Config-0.04.tar.gz
 Summary  : 'temporarily set Config or XSConfig values'
